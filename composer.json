@@ -1,0 +1,14 @@
+{
+    "name": "dzyuz/bwt_test",
+    "description": "bwt test task",
+    "type": "project",
+    "authors": [
+        {
+            "name": "davidzyuz",
+            "email": "zyuzdavid@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
