@@ -17,17 +17,26 @@ define ('zp', 'http://www.gismeteo.ua/city/daily/5093/');
 $result = file('./data.txt', 2);
 // fclose($stream);
 $output = '';
-foreach($result as $key) {
-	$output .= $key . '<br />';
+echo '<ol>';
+foreach($result as $key => $value) {
+	// $output .= $key . '<br />';
+	if (($key <= 420) || ($key >= 450)) {
+		continue;
+	}
+	echo '<li>';
+	print_r($key);
+	print_r(strip_tags($value)) . '<br />';
+	echo '</li>';
 }
-$pattern = "/([a-z0-9]+)/is";
+echo '</ol>';
+/* $pattern = "/([a-z0-9]+)/is";
 
-$newOutput = htmlspecialchars($output);
-print_r($newOutput);
-preg_match($pattern, $newOutput, $m);
+$newOutput = $output;
+print_r(strip_tags($newOutput)); */
+/* preg_match($pattern, $newOutput, $m);
 echo '<pre>';
 print_r($m);
-echo '</pre>';
+echo '</pre>'; */
 
 
 /* $string = 'davidzyuz@gmail.com';
